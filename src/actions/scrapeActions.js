@@ -6,19 +6,12 @@ const {
   GET_SCRAPED_DATA_FAILED
 } = actionTypes;
 
-const appendArgs = (url, data) => {
-  return `${url}?${JSON.stringify(data)
-    .replace(/":"/g, '=')
-    .replace(/,/g, '&')
-    .replace(/{|}|"/g, '')}`;
-};
-
 const scrapeWeb = (args) => {
-  return (dispatch) => {
-    return axios({
+  return async (dispatch) => {
+    await axios({
       data: args,
-      method: 'GET',
-      url: appendArgs(`${process.env.GETURL}/simple-web-scraper/scraping/`, args),
+      method: 'POST',
+      url: `${process.env.GETURL}/simple-web-scraper/scraping/`,
     })
       .then((response) => {
         if (response) {

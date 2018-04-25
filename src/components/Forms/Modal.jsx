@@ -61,8 +61,10 @@ class Modal extends React.Component {
 
                 <div className="card grey darken-1">
                   <div className="card-content white-text">
-                    {scrapedData.data ? JSON.stringify(scrapedData.data) : ''}
+                    <pre>
+                    {scrapedData.data ? JSON.stringify(scrapedData.data, undefined, 4) : ''}
                     {scrapedData.error ? JSON.stringify(scrapedData.data) : ''}
+                    </pre>
                     </div>
                 </div>
 

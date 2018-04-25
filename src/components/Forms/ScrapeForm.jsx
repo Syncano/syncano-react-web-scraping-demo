@@ -43,10 +43,9 @@ class ScrapeForm extends React.Component {
     const scrapeData = {
       url: this.state.url,
       selectorType: this.state.selectorType,
-      [this.state.identifier]: this.state.selector,
+      config: { [this.state.identifier]: this.state.selector },
       extract: this.state.extractorType
     };
-
     this.props.scrapeWeb(scrapeData);
   }
 
