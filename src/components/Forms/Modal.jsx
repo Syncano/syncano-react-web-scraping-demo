@@ -28,7 +28,6 @@ class Modal extends React.Component {
     this.setState({ isOpen: !this.state.isOpen });
   }
 
-
   /**
    * Renders component
    * @return {XML} JSX
@@ -62,12 +61,10 @@ class Modal extends React.Component {
                 <div className="card grey darken-1">
                   <div className="card-content white-text">
                     <pre>
-                    {scrapedData.data ? JSON.stringify(scrapedData.data, undefined, 4) : ''}
-                    {scrapedData.error ? JSON.stringify(scrapedData.data) : ''}
+                    {scrapedData ? JSON.stringify(scrapedData, undefined, 4) : ''}
                     </pre>
                     </div>
                 </div>
-
               </div>
             </div>
             </div>
@@ -79,7 +76,7 @@ class Modal extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    scrapeState: state.scrapeReducer,
+    scrapeState: state,
   };
 };
 

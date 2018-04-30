@@ -1,19 +1,10 @@
-// some issues in safari, try chrome 
-// importing bourbon
-// @import "bourbon";
 
-// Importing images for header and background
 $bgImage: url("../images/landing_bg.jpg");
 
 @import url('https://fonts.googleapis.com/css?family=Lato:300');
-
-// importing awesome css here for icons. Ended up not using as of now! :/
 @import url('https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css');
 
-
-.page-wrap{   
-    // Make height 100% and enable this border code to see what happens
-    // border: 3px solid red; 
+.page-wrap{    
     font-family: 'Lato', sans-serif;
     }
 
@@ -22,12 +13,10 @@ header::after{
   position:fixed;
 }
 
-header{
- // Why 100vh? Using this will keep the image header height in 100% proportion to the viewport height. Using 100% will do the same but is not a good practice. Critical to know!!!  
+header{ 
     height:100vh; 
     background-image: $bgImage;
     background-size: cover;
-    // Now this will center the header text
     z-index: 2;
     display: flex;
     flex-flow: column;
@@ -47,7 +36,7 @@ h1 {
     z-index: 1;
     font-size: 50px;
     color: ghostwhite;
-    text-shadow: -2px 2px 5px rgba(0,0,0,0.7); // this shadow is maintained across header items
+    text-shadow: -2px 2px 5px rgba(0,0,0,0.7);
 }
 
 .head-link{
@@ -60,12 +49,11 @@ h1 {
     border-bottom: 2px solid ghostwhite;
     line-height: 48px;
     color: ghostwhite;
-    margin: 20px auto 20px; //brings the link to center
+    margin: 20px auto 20px;
     -webkit-font-smoothing: antialiased;
     text-shadow: -2px 2px 5px rgba(0,0,0,0.7);
 }
 
-// hover effect to intuit user to click on the link to enable scrolling
 .head-link:hover{
     position: relative;
     display: block;
@@ -183,9 +171,9 @@ h1 {
  }
 
  pre {
-  white-space: pre-wrap;       /* Since CSS 2.1 */
-  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
-  white-space: -pre-wrap;      /* Opera 4-6 */
-  white-space: -o-pre-wrap;    /* Opera 7 */
-  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
 }

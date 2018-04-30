@@ -14,8 +14,8 @@ class ScrapeForm extends React.Component {
     url: '',
     identifier: '',
     selector: '',
-    selectorType: '',
-    extractorType: '',
+    selectorType: 'css',
+    extractorType: 'json',
   };
 
   /**
@@ -24,16 +24,6 @@ class ScrapeForm extends React.Component {
    */
   onChange = (event) => {
     this.setState({ [event.target.name]: event.target.value });
-  }
-
-  /**
- *
- * @param {*} name - for dropDown name
- * @param {*} value - for dropDown value
- * @returns {function} - setState
- */
-  onSelect = (name, value) => {
-    this.setState({ [name]: value });
   }
 
   onSubmit = () => {
@@ -97,28 +87,33 @@ class ScrapeForm extends React.Component {
           <label>Selector</label>
         </div>
 
-        <div className="input-field col s3">
-          <ul id = "selector-dropdown" className = "dropdown-content">
-            <li onClick={() => this.onSelect('selectorType', 'css')}>css-selector</li>
-            <li className = "divider"></li>
-            <li onClick={() => this.onSelect('selectorType', 'xpath')}>xpath-selector</li>
-          </ul>
-          <a className = "input-field dropdown-button" data-activates = "selector-dropdown">
-            {!this.state.selectorType.length ? 'choose selector-type' : this.state.selectorType}
-            <i className = "fa fa-caret-down right"></i></a><br />
+        <div className="switch col s3">
+          <label>
+            css-selector
+            <input
+              type="checkbox"
+              name="selectorType"
+              value={this.state.selectorType === 'css' ? 'xpath' : 'css'}
+              onChange={this.onChange}
+            />
+            <span className="lever"></span>
+            xpath-selector
+          </label>
         </div>
 
-        <div className="input-field col s2">
-          <ul id = "extract-dropdown" className = "dropdown-content">
-            <li onClick={() => this.onSelect('extractorType', 'json')}>JSON</li>
-            <li className = "divider"></li>
-            <li onClick={() => this.onSelect('extractorType', 'xml')}>XML</li>
-          </ul>
-          <a className = "input-field dropdown-button" data-activates = "extract-dropdown">
-             {!this.state.extractorType.length ? 'extract option' : this.state.extractorType}
-            <i className = "fa fa-caret-down right"></i></a>
+        <div className="switch col s2">
+          <label>
+            JSON
+            <input
+              type="checkbox"
+              name="extractorType"
+              value={this.state.extractorType === 'json' ? 'xml' : 'json'}
+              onChange={this.onChange}
+            />
+            <span className="lever"></span>
+            XML
+          </label>
         </div>
-
       </div>
 
       <button className="btn waves-effect waves-light light-blue darken-2 right" type="button" name="action" onClick={this.onSubmit}>Scrape it

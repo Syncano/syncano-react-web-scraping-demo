@@ -1,5 +1,6 @@
 import React from 'react';
 import Modal from './Forms/Modal';
+import logo from '../images/syncano_logo.png';
 
 class Home extends React.Component { // eslint-disable-line
   state = {
@@ -21,7 +22,7 @@ class Home extends React.Component { // eslint-disable-line
 
                 <img
                   className='Header-logoImage'
-                  src='https://pbs.twimg.com/profile_images/692354435738161152/UAkVM9-p.png'
+                  src={logo}
                   alt='Logo'
                 />
               </div>

@@ -6,7 +6,7 @@ import Home from './Home';
 const App = () => {
   return (
       <div className="container-fluid">
-        <Route exact path="/" component={Home} />
+        <Home />
       </div>
   );
 };

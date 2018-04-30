@@ -1,7 +1,5 @@
 const initialState = {
-  scrape: {
-    data: {}
-  }
+  scrape: {}
 };
 
 export default initialState;

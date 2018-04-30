@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/Syncano/syncano-react-web-scraping-demo#readme",
   "dependencies": {
+    "@syncano/client": "^0.12.1",
     "axios": "^0.17.1",
     "babel-polyfill": "^6.26.0",
     "babel-register": "^6.26.0",
@@ -45,7 +46,6 @@
     "redux-immutable-state-invariant": "^2.1.0",
     "redux-thunk": "^2.2.0",
     "sweetalert": "^2.1.0",
-    "syncano-client": "^0.2.9",
     "webpack": "^3.10.0",
     "webpack-dev-middleware": "^2.0.4",
     "webpack-dev-server": "^2.9.7",
