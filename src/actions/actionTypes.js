@@ -1,0 +1,6 @@
+const actionTypes = {
+  GET_SCRAPED_DATA_SUCCESSFUL: 'GET_SCRAPED_DATA_SUCCESSFUL',
+  GET_SCRAPED_DATA_FAILED: 'GET_SCRAPED_DATA_FAILED',
+};
+
+export default actionTypes;
